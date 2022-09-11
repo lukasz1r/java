@@ -1,6 +1,7 @@
 public class Plik {
+        String nazwa;
         public Plik(String nazwa) throws PlikNieznany{
-
+            this.nazwa = nazwa;
         }
 
         public void zamknij() throws BladPliku{

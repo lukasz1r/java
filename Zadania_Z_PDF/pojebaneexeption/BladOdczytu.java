@@ -1,5 +1,5 @@
 public class BladOdczytu extends BladPliku{
-    public BladOdczytu(String message){
-        super(message);
-    }
+    // public BladOdczytu(String message){
+    //     super(message);
+    // }
 }

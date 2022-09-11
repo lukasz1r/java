@@ -1,7 +1,8 @@
 public class PlikSzyfrowany extends Plik {
-    
+    String nazString;
     public PlikSzyfrowany(String nazwaString) throws PlikNieznany{
         super(nazwaString);
+        this.nazString = nazwaString;
     }
 
         public void zamknij() throws BladPliku{
@@ -15,12 +16,12 @@ public class PlikSzyfrowany extends Plik {
         public int odczytaj() throws BladOdczytu{         
             try {
                 //Otwieranie pliku
-                throw new TymczasowyBladOdczytu("dupa");//niepowodzenia owatracia pliku
+                throw new TymczasowyBladOdczytu();//niepowodzenia owatracia pliku
                 
             } catch (TymczasowyBladOdczytu e) {//zlapanie informacji o niepowodzeniu otwarcia pliku
                 try {
                     //Ponowna proba otwarcia pliku
-                    throw new PermanentnyBladOdczytu("DupaPermanenta");//Niepowodzenie otwrarcia pliku
+                    throw new PermanentnyBladOdczytu();//Niepowodzenie otwrarcia pliku
                 } catch (PermanentnyBladOdczytu x) { //zlapanie bledu o niepowodzeniu otwarcia pliku kolejny raz
                     //wyrzucenie informac+ji iz pliku nie da sie otworzyc permamentnie 
                 }
